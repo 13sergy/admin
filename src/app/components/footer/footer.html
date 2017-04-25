@@ -1,0 +1,17 @@
+<!-- Main Footer -->
+<footer class="main-footer">
+
+  <!-- To the right Visible en pantallas mas grandes que xs a la derecha -->
+  <div class="pull-right hidden-xs">
+    <span ng-bind="MainCtrl.config.version"></span>
+  </div>
+
+  <!--Default to the left-->
+  <p class="text-center">
+    <strong>Copyright &copy; <span ng-bind="MainCtrl.config.year"></span>
+      <a href="{{MainCtrl.config.web}}" ng-bind="MainCtrl.config.empresa"></a>.
+    </strong> Todos los derechos reservados.
+  </p>
+  <!--Visible en pantallas xs en el centro-->
+  <!--<p class="text-center visible-xs">v1.0.1</p>-->
+</footer>

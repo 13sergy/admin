@@ -1,0 +1,63 @@
+<!-- Menu Toggle Button -->
+<a href="" class="dropdown-toggle" data-toggle="dropdown">
+  <!-- The user image in the navbar-->
+  <i class="fa fa-sign-in fa-lg" aria-hidden="true"></i>
+  <!-- hidden-xs hides the username on small devices so only the image appears. -->
+  <span class="hidden-xs">Sign In</span>
+</a>
+<ul class="dropdown-menu animated fadeIn">
+  <!-- Menu Body -->
+  <li class="user-body">
+    <div class="row">
+      <div class="col-xs-2 text-center">
+        <a href=""></a>
+      </div>
+      <div class="col-xs-8 text-center">
+        <a href="">Inicia sesión</a>
+      </div>
+      <div class="col-xs-2 text-center">
+        <a href=""></a>
+      </div>
+    </div>
+    <!-- /.row -->
+
+
+    <div class="login-box-body" >
+
+      <form  name="forma" autocomplete="off" ng-submit="checkLogin(datos)">
+
+        <div class="form-group has-feedback">
+          <input type="text" name="user" class="form-control" placeholder="User" required="required" ng-model="datos.usuario">
+          <span class="glyphicon glyphicon-user form-control-feedback"></span>
+
+        </div>
+
+        <div class="form-group has-feedback">
+          <input type="password" name="password" class="form-control" placeholder="Password" required="required" ng-model="datos.password">
+          <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+        </div>
+
+        <div class="row">
+          <div class="col-xs-12">
+            <button type="submit" class="btn btn-primary btn-block btn-flat" ng-disabled="forma.$invalid || invalido">Sign
+              In</button>
+          </div><!-- /.col -->
+        </div>
+
+        <!--ERROR MESSAGE-->
+        <div class="row" ng-show="invalido">
+          <div class="col-md-12">
+            <br>
+            <div class="alert alert-danger">
+              <strong>Verificar!</strong>
+              Usuario/password incorrecto
+            </div>
+          </div><!-- /.col -->
+        </div>
+
+      </form>
+
+    </div>
+
+  </li>
+</ul>
